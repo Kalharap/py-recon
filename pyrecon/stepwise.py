@@ -21,8 +21,9 @@ def find_best_set_of_chrons(chrons, observed, max_chrons, calib_start, calib_end
         Tree-ring chronologies over the calibration period, indexed by year.
         
     observed : pandas.Series
-        observed target (e.g. streamflow, precipitation) over the calibration period,
-        aligned to the same year index as "chrons".
+        Instrumental target (e.g. streamflow, precipitation) over the
+        calibration period, indexed by year and aligned to the predictor
+        matrix ``X``. Must be 1-D — pass a Series, not a one-column DataFrame.
    
    max_chrons : int
         Maximum subset size to evaluate. The search runs over subset sizes
@@ -128,8 +129,9 @@ def observed_vs_stepwise_regression(chrons, best_chrons, observed, calib_start, 
         Column names of the chronologies in the best-scoring subset.
     
     observed : pandas.Series
-        Instrumental target (e.g. streamflow, precipitation) over the calibration period,
-        aligned to the same year index as "best_chrons".
+        Instrumental target (e.g. streamflow, precipitation) over the
+        calibration period, indexed by year and aligned to the predictor
+        matrix ``X``. Must be 1-D — pass a Series, not a one-column DataFrame.
         
     calib_start, calib_end : int
         First and last year of the calibration period (inclusive), used to
