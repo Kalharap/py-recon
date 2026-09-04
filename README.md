@@ -19,11 +19,10 @@ Full documentation of the inputs and outputs for each method lives in the docstr
 ## Example
 
 The included `example.ipynb` reproduces an Upper Colorado River Basin streamflow
-reconstruction in the style of Woodhouse et al. (2006), using a **residual reconstruction** approach:
+reconstruction at the Lees Ferry gauge, using the residual chronologies of Woodhouse et al.
+(2006):
 
-> Woodhouse, C. A., Gray, S. T., & Meko, D. M. (2006). Updated streamflow
-> reconstructions for the Upper Colorado River Basin. *Water Resources Research*,
-> 42, W05415. https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005WR004455
+> https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005WR004455
 
 Although the example reconstructs streamflow, the method is general: by swapping in
 a different observed target (the `y` series), you can reconstruct any other parameter — precipitation, temperature, PDSI, etc.
@@ -38,15 +37,17 @@ pip install -r requirements.txt
 
 ## Repository structure
 
+```
 py-recon/
-├── pyrecon/ # reconstruction methods + plotting
-│ ├── stepwise.py
-│ ├── pca.py
-│ ├── knn.py
-│ └── plotting.py
-├── example.ipynb # end-to-end example (Woodhouse et al. 2006 style)
+├── pyrecon/          # reconstruction methods + plotting
+│   ├── stepwise.py
+│   ├── pca.py
+│   ├── knn.py
+│   └── plotting.py
+├── example.ipynb     # end-to-end example
 ├── requirements.txt
 └── LICENSE
+```
 
 
 ## License
