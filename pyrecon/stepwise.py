@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error
 
 
 
-def find_best_set_of_chrons(chrons, observed, max_chrons, direction="forward", plot=True):
+def find_best_set_of_chrons(chrons, observed, max_chrons, calib_start, calib_end, direction="forward", plot=True):
     
     """Select the best-performing subset of chronologies by sequential feature selection.
 
@@ -60,7 +60,7 @@ def find_best_set_of_chrons(chrons, observed, max_chrons, direction="forward", p
 
     """
 
-
+    chrons = chrons.loc[calib_start:calib_end]
     pipe = Pipeline([("scaler", StandardScaler()), ("lr", LinearRegression())])
     cv = RepeatedKFold(n_splits=5, n_repeats=10, random_state=42)
     
@@ -110,7 +110,7 @@ def find_best_set_of_chrons(chrons, observed, max_chrons, direction="forward", p
 
 
 
-def observed_vs_stepwise_regression(best_chrons, observed):
+def observed_vs_stepwise_regression(best_chrons, observed, calib_start, calib_end):
     
     
     """
@@ -126,6 +126,10 @@ def observed_vs_stepwise_regression(best_chrons, observed):
     observed : pandas.Series
         Instrumental target (e.g. streamflow, precipitation) over the calibration period,
         aligned to the same year index as "best_chrons".
+        
+    calib_start, calib_end : int
+        First and last year of the calibration period (inclusive), used to
+        slice ``best_chrons`` on its year index.
 
     Returns
     -------
@@ -146,7 +150,7 @@ def observed_vs_stepwise_regression(best_chrons, observed):
 
 
     """
-
+    best_chrons = df[best_chrons].loc[calib_start:calib_end]
     pipe = Pipeline([('scaler', StandardScaler()), ('lr', LinearRegression())])
     pipe.fit(best_chrons, observed)
     recon = pipe.predict(best_chrons)
@@ -163,7 +167,7 @@ def observed_vs_stepwise_regression(best_chrons, observed):
 
 
 
-def stepwise_regression_reconstruction(paleo_chrons, pipe):
+def stepwise_regression_reconstruction(best_chrons,recon_start, recon_end, pipe):
     
     """Generate the full-period streamflow reconstruction from a fitted model.
 
@@ -173,6 +177,10 @@ def stepwise_regression_reconstruction(paleo_chrons, pipe):
         Tree-ring chronologies over the full reconstruction period, indexed by
         year. Must contain the same chronology columns, in the same order, that
         ``pipe`` was fitted on.
+        
+    recon_start, recon_end : int
+        First and last year of the reconstruction period (inclusive), used to
+        slice ``df[best_chrons]`` on its year index.
    
     pipe : sklearn.pipeline.Pipeline
         A model already fitted on the calibration period, as returned by
@@ -185,7 +193,7 @@ def stepwise_regression_reconstruction(paleo_chrons, pipe):
 
 
     """
-
+    paleo_chrons = df[best_chrons].loc[recon_start:recon_end]
     full_recon = pd.Series(pipe.predict(paleo_chrons), index=paleo_chrons.index, name='stepwise_regression')
 
     return full_recon
