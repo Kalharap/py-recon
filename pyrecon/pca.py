@@ -117,7 +117,8 @@ def observed_vs_pca_regression(PCA_scores, observed, number_pca, calib_start, ca
     
     observed : pandas.Series
         Instrumental target (e.g. streamflow, precipitation) over the calibration period,
-        aligned to the same year index as "best_PCA".
+        aligned to the same year index as "best_PCA". Must be 1-D — pass a Series, 
+        not a one-column DataFrame.
     
     number_pca : int
         Number of leading principal components to include as predictors
