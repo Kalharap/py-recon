@@ -1,0 +1,19 @@
+# macOS / editors
+.DS_Store
+.Rhistory
+.jovianrc
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+Untitled.ipynb
+__init__.ipynb
+
+# generated outputs
+reconstruction_*.xlsx
