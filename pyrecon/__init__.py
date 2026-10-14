@@ -11,7 +11,7 @@ from pyrecon.pca import (
     observed_vs_pca_regression,
     pca_regression_reconstruction,
 )
-from pyrecon.KNN import (
+from pyrecon.knn import (
     knn_reconstruct,
     loocv_knn_mean,
 
