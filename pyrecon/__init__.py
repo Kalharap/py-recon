@@ -11,6 +11,11 @@ from pyrecon.pca import (
     observed_vs_pca_regression,
     pca_regression_reconstruction,
 )
+from pyrecon.KNN import (
+    knn_reconstruct,
+    loocv_knn_mean,
+
+)
 from pyrecon.plotting import (
     plot_observed_vs_reconstructed,
     plot_full_reconstruction,
@@ -28,6 +33,10 @@ __all__ = [
     "find_best_set_of_PCA",
     "observed_vs_pca_regression",
     "pca_regression_reconstruction",
+    # knn
+    "select_pcs_knn",
+    "observed_vs_knn",
+    "knn_reconstruct",
     # plotting
     "plot_observed_vs_reconstructed",
     "plot_full_reconstruction",
