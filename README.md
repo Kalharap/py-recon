@@ -14,6 +14,7 @@ A Python toolkit for **dendrochronological reconstructions**
 
 Full documentation of the inputs and outputs for each method lives in the docstrings of the corresponding module — see `pyrecon/stepwise.py`, `pyrecon/pca.py`, and `pyrecon/knn.py`.
 
+
 ## Example
 
 The included `example.ipynb` reproduces an Upper Colorado River Basin streamflow reconstruction at the Lees Ferry gauge, using the residual chronologies of Woodhouse et al.(2006):
@@ -24,10 +25,18 @@ Although the example reconstructs streamflow, the method is general: by swapping
 
 ## Installation
 
+Install directly from GitHub:
+
+```bash
+pip install git+https://github.com/Kalharap/py-recon.git
+```
+
+Or clone and install in editable mode for development:
+
 ```bash
 git clone https://github.com/Kalharap/py-recon.git
 cd py-recon
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Repository structure
