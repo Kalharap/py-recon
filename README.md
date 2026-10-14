@@ -53,3 +53,8 @@ py-recon/
 ## License
 
 See [LICENSE](LICENSE).
+
+## Issues
+
+Please open an [issue](https://github.com/Kalharap/py-recon/issues) if you have any questions, suggestions, or encounter any problems with the resources in this repository.
+
