@@ -9,8 +9,8 @@ reconstruction methods used in dendrochronology. It demonstrates how to reconstr
 a target series from tree-ring chronologies using three regression approaches:
 
 - **Stepwise regression** (`pyrecon/stepwise.py`)
-- **PCA regression** (`pyrecon/pca.py`)
-- **KNN regression** (`pyrecon/knn.py`)
+- **Principle Component regression** (`pyrecon/pca.py`)
+- **k-nearest neighbors/ Non-parametric regression** (`pyrecon/knn.py`)
 
 ## Documentation
 
