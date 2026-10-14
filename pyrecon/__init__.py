@@ -19,6 +19,7 @@ from pyrecon.knn import (
 from pyrecon.plotting import (
     plot_observed_vs_reconstructed,
     plot_full_reconstruction,
+    reconstruction_stats,
 )
 
 __version__ = "0.0.1"
@@ -40,4 +41,5 @@ __all__ = [
     # plotting
     "plot_observed_vs_reconstructed",
     "plot_full_reconstruction",
+    "reconstruction_stats",
 ]
