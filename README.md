@@ -50,9 +50,10 @@ py-recon/
 ```
 
 
-## License
+## Contact
 
-See [LICENSE](LICENSE).
+perern1@unlv.nevada.edu
+Kalhara Perera, Department of Physics and Astronomy, University of Nevada, Las Vegas
 
 ## Issues
 
