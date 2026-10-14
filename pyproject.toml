@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "py-recon"
+version = "0.1.0"
+description = "Calibration–verification streamflow reconstruction from tree-ring chronologies (stepwise, PCA, and KNN regression)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Kalhara Perera" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "openpyxl",
+]
+
+[project.urls]
+Repository = "https://github.com/Kalharap/py-recon"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyrecon"]
