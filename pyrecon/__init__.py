@@ -35,8 +35,7 @@ __all__ = [
     "observed_vs_pca_regression",
     "pca_regression_reconstruction",
     # knn
-    "select_pcs_knn",
-    "observed_vs_knn",
+    "loocv_knn_mean",
     "knn_reconstruct",
     # plotting
     "plot_observed_vs_reconstructed",
