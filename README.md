@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23424323.svg)](https://doi.org/10.5281/zenodo.23424323)
+
 # py-recon  
 
 A Python toolkit for **dendrochronological reconstructions** 
@@ -48,11 +50,27 @@ py-recon/
 │   ├── pca.py
 │   ├── knn.py
 │   └── plotting.py
-├── example_residual/standard.ipynb     # end-to-end example
+├── example_residual/standard_chrons.ipynb     # end-to-end example
 ├── requirements.txt
 └── LICENSE
 ```
 
+## Citation
+
+If you use py-recon in your research, please cite it:
+
+> Perera, K. (2026). *py-recon: A Python toolkit for tree-ring based climate reconstruction* (Version v0.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23424323
+```bibtex
+@software{perera_pyrecon_2026,
+  author    = {Perera, Kalhara},
+  title     = {py-recon: A Python toolkit for tree-ring based climate reconstruction},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v0.1.0},
+  doi       = {10.5281/zenodo.23424323},
+  url       = {https://doi.org/10.5281/zenodo.23424323}
+}
+```
 
 ## Contact
 
