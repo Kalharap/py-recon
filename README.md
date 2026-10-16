@@ -17,7 +17,7 @@ Full documentation of the inputs and outputs for each method lives in the docstr
 
 ## Example
 
-The included `example.ipynb` reproduces an Upper Colorado River Basin streamflow reconstruction at the Lees Ferry gauge, using the residual chronologies of Woodhouse et al.(2006):
+The included `example.ipynb` reproduces an Upper Colorado River Basin streamflow reconstruction at the Lees Ferry gauge, using the residual and standard  chronologies of Woodhouse et al.(2006):
 
 > https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005WR004455
 
@@ -48,7 +48,7 @@ py-recon/
 │   ├── pca.py
 │   ├── knn.py
 │   └── plotting.py
-├── example.ipynb     # end-to-end example
+├── example_residual/standard.ipynb     # end-to-end example
 ├── requirements.txt
 └── LICENSE
 ```
